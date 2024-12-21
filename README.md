@@ -8,7 +8,7 @@ This repository showcases my second-semester Cloud Engineering project at AltSch
 - **Web Server Configuration**: Installed and configured Apache to host web content.  
 - **HTML Deployment**: Delivered a custom landing page with personal and project details.  
 - **Networking Setup**: Configured security groups for HTTP and HTTPS traffic.  
-- **SSL Implementation**: Secured the server using Certbot for HTTPS (optional).  
+- **SSL Implementation**: Secured the server using Certbot for HTTPS.  
  
 
 ## Tools & Technologies  
