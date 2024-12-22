@@ -1,4 +1,4 @@
-# AltSchool Second Semester Cloud Project - Joseph Ibeh
+# AltSchool Second Semester Examination Cloud Project - Joseph Ibeh
 
 
 ## Introduction
@@ -39,14 +39,13 @@ To set up a Linux server using AWS for a web application prototype.
 
 1. **Sign in to AWS**:
    - Visit [AWS Management Console](https://aws.amazon.com/console/).
-
-![Aws sign in ](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/aws-log-in.png)
-
-
+  
 2. **Create a New Instance**:
    - Click on "EC2" in the AWS console.
-   - Choose a Linux distribution (e.g., Ubuntu 20.04 or Amazon Linux 2).
+   - Choose a Linux distribution (e.g., Ubuntu 22.04 ).
    - Configure instance settings, ensuring a public IP is assigned.
+
+![Aws sign in ](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/aws-log-in.png)
 
 ![create instance](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/instance-launch-instance.png)
 
@@ -299,7 +298,7 @@ Prerequisite
 ```
 ![certbot ](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/sudo-cert-bot-certificate.png)
 
-- **Open a web browser and visit http://dormain name to Confirm Server is Accessible:**
+- **Open a web browser and visit https://josephibeh.me to Confirm Server is Accessible:**
 
 ![secured page 1 ](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/landing-page-1-sec.png)
 
