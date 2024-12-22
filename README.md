@@ -13,7 +13,7 @@ The main objective of this project is to:
 
 1. Provision a Linux server using AWS.
 2. Install and configure a web server (Apache) to serve web content.
-3. Create a simple HTML landing page with personal and project details.
+3.Create a simple HTML landing page that includes your name, a project title such as "Welcome to [Your Name] Landing Page," a brief description of your project, and your full bio with all the interesting information about you.
 4. Configure networking to allow HTTP traffic (port 80) and optionally HTTPS traffic (port 443).
 5. Provide a public IP address or domain name for external access to the web page.
 
@@ -40,25 +40,48 @@ To set up a Linux server using AWS for a web application prototype.
 1. **Sign in to AWS**:
    - Visit [AWS Management Console](https://aws.amazon.com/console/).
 
+![Aws sign in ](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/aws-log-in.png)
+
+
 2. **Create a New Instance**:
    - Click on "EC2" in the AWS console.
-   - Select "Launch Instance".
    - Choose a Linux distribution (e.g., Ubuntu 20.04 or Amazon Linux 2).
    - Configure instance settings, ensuring a public IP is assigned.
 
+![create instance](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/instance-launch-instance.png)
+
+![server name](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/server-name.png)
+
+![choose linux distribution, ubuntu AMI](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/AMI-Ubuntu.png)
+
+
 3. **Configure Key Pair**:
    - Create a new key pair (download the private key for future SSH access).
+  
+![Key pair](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/key-pair.png)
+
 
 4. **Create Security Group**:
    - Allow HTTP traffic on port 80 and SSH on port 22.
 
-5. **Connect to the Server**:
+![Network Security group](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/network-security-group.png)
+
+5.  Launch Instance.
+
+![Launch Instance](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/launch-instance.png)
+
+![Instance running](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/instance-running.png)
+   
+
+6. **Connect to the Server**:
    - Use SSH to connect to the server using the private key:
      ```bash  
      ssh -i [path_to_private_key] ubuntu@[public_ip_address]  
      ```
+![Connect](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/click-connect.png)
 
----
+![connect](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/ssh-client.png)
+
 
 ## Web Server Setup
 
@@ -67,6 +90,18 @@ To set up a web server to serve web content.
 
 ### Steps:
 
+- **ssh to your gitbash CLI**
+
+ ```bash  
+     ssh -i [path_to_private_key] ubuntu@[public_ip_address]  
+ ```
+
+  ![ssh CLI](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/terminal-ssh-in.png)
+
+- **Switch to root user**
+
+![root user](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/switch-to-sudoer.png)
+  
 1. **Update and Install Apache**:
    ```bash
    sudo apt update
@@ -81,9 +116,12 @@ To set up a web server to serve web content.
    sudo systemctl enable apache2
 ```
 
+![update,  install, start apache2](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/sudo-apt-install-apache....png)
+
 3. **Check Web Server:**
 
 Open a web browser and visit the server’s public IP address to confirm Apache is working.
+
 
 ## HTML Page Deployment
 Objective:
@@ -222,32 +260,54 @@ Insert the content of HTML page
   </body>
 </html>
 
+![html content](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/html-content-sudo%20vim-var-www-html-index.html.png)
+
+![html content contd](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/html-content-contd.png)
+
 
 3. Open a web browser and visit http://your_public_ip_address to Confirm Server is Accessible:
+
+![web content](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/landing-page-1-ns.png)
+
+![web content contd](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/landing-page-2-ns.png)
+
+![web content contd](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/landing-page-3-ns.png)
 
 
 ## Configuring HTTPS
 
 Prerequisite
 - Purchase a domain name:
-- Purchase a domain name (e.g., josephibeh.me) from domain registrars like Namecheap or another trusted domain registrar.
+- Purchased a domain name (e.g., josephibeh.me) from domain registrars like Namecheap or another trusted domain registrar.
 - Update DNS Settings:
 -  Log into your domain registrar’s dashboard.
 -  Navigate to DNS settings.
 - Add a new A record with your Elastic IP (Public IP Address from your server).
+
+![dormain name namecheap](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/setting-up-DNS-namecheap.png)
 
 ### Steps:
 1. Install Certbot:
 ```bash
    sudo apt install certbot python3-certbot-apache -y
 ```
+
 2. Obtain SSL Certificate:
 
 ```bash
    sudo certbot --apache -d josephibeh.me -d www.josephibeh.me
 ```
+![certbot ](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/sudo-cert-bot-certificate.png)
+
+- **Open a web browser and visit http://dormain name to Confirm Server is Accessible:**
+
+![secured page 1 ](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/landing-page-1-sec.png)
+
+![secured contd 3 ](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/landing-page-2-sec.png)
+
+![secured contd 3 ](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/landing-page-3-sec.png)
 
 ## Deliverables
-
-- **Public IP Address**: []  
+  
+- **secured dormain**: [josephibeh.me]
 - **Git Repository**: [Your Git Repository Link]
