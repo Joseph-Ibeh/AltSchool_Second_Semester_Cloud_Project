@@ -310,4 +310,5 @@ Prerequisite
 ## Deliverables
   
 - **secured dormain**: [josephibeh.me]
-- **Git Repository**: [Your Git Repository Link]
+- **Git Repository**: [https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project]
+- **Documentation with a snapshot as shown above.**
