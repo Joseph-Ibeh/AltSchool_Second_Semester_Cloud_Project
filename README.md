@@ -61,7 +61,7 @@ To set up a Linux server using AWS for a web application prototype.
 
 
 4. **Create Security Group**:
-   - Allow HTTP traffic on port 80 and SSH on port 22.
+   - Allow HTTP & HTTPS traffic on port 80, 443 and SSH on port 22.
 
 ![Network Security group](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/network-security-group.png)
 
@@ -136,7 +136,7 @@ sudo vim /var/www/html/index.html
 
 2. Add the HTML Content:
 
-Insert the content of HTML page
+The content of HTML page
 
 <!DOCTYPE html>
 <html lang="en">
@@ -264,7 +264,7 @@ Insert the content of HTML page
 ![html content contd](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/html-content-contd.png)
 
 
-3. Open a web browser and visit http://your_public_ip_address to Confirm Server is Accessible:
+3. Open a web browser and visit http://52.90.54.214 to Confirm Server is Accessible:
 
 ![web content](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/landing-page-1-ns.png)
 
@@ -281,7 +281,7 @@ Prerequisite
 - Update DNS Settings:
 -  Log into your domain registrar’s dashboard.
 -  Navigate to DNS settings.
-- Add a new A record with your Elastic IP (Public IP Address from your server).
+- Add a new A record with your IP (Public IP Address from your server).
 
 ![dormain name namecheap](https://github.com/Joseph-Ibeh/AltSchool_Second_Semester_Cloud_Project/blob/main/images/setting-up-DNS-namecheap.png)
 
