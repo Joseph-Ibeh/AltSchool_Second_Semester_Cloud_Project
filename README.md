@@ -13,7 +13,7 @@ The main objective of this project is to:
 
 1. Provision a Linux server using AWS.
 2. Install and configure a web server (Apache) to serve web content.
-3.Create a simple HTML landing page that includes your name, a project title such as "Welcome to [Your Name] Landing Page," a brief description of your project, and your full bio with all the interesting information about you.
+3.Create a simple HTML landing page that includes "your name, a project title such as Welcome to [Your Name] Landing Page, a brief description of your project, and your full bio with all the interesting information about you".
 4. Configure networking to allow HTTP traffic (port 80) and optionally HTTPS traffic (port 443).
 5. Provide a public IP address or domain name for external access to the web page.
 
